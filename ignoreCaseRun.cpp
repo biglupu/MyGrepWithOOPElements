@@ -1,10 +1,6 @@
 #include "ignoreCaseRun.h"
 
-using std::cout;
-using std::cin;
-using std::endl;
-using std::string;
-using std::ifstream;
+using namespace std;
 
 string lower_string(string str)
 {
@@ -120,8 +116,7 @@ void ignoreCaseRUN(string two, string three, int O, int L, int R, int I)
         if (R == 1)
         {
             found = count - unfound - 1;
-            // -1 koska ensimmäinen rivi on rivi numero 1, eikä rivi numero 0. 
-            
+               
         }
         if (O == 1)
         {

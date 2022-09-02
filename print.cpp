@@ -2,10 +2,6 @@
 #include "print.h"
 #include <limits>
 
-//using std::cout;
-//using std::cin;
-//using std::endl;
-//using std::string;
 
 using namespace std;
 
@@ -28,7 +24,7 @@ int printInfo()
 			cout << "Error, please input again" << endl;
 			virhe = true;
 			cin.clear();
-			cin.ignore(80, '\n'); // clearaa 80 merkkiä näppäimistöpuskurista ja enterin
+			cin.ignore(numeric_limits<streamsize>::max(), '\n');
 		}
 	} while (virhe);
 	cin.clear();
@@ -105,9 +101,8 @@ int printAcronyms()
 
 	cout << "HELP: \"h\", \"help\", \"HELP\"";
 	cout << "\nTutorial documentation on the program\n";
-	cout << "\nOPTIONS: \"o\", \"options\"";
 	cout << endl;
-	cout << "Basic examples on how to run the program";
+	cout << "Basic commands to run the program";
 
 	cout << "LINE NUMBER: \"l\" " << endl;
 	cout << "OCCURANCES: \"o\" " << endl;
@@ -116,7 +111,7 @@ int printAcronyms()
 
 
 
-	cout << "List of errors\n";
+	cout << "List of errors\n\n";
 	cout << "Errors 100-200, unspecified run argument\n";
 	cout << "Errors 200-300, input not one of the given choices\n";
 	cout << "Errors 400-403, tried to run to program with a file that could not be open";

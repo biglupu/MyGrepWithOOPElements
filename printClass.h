@@ -2,15 +2,15 @@
 #include <iostream>
 #include <string>
 #include "print.h"
-//#include "basicRun.h"
 
-using std::string;
+
+using namespace std;
 
 class Documentation {
 public:
-	Documentation(string mYksi);
 	void argumentCheck(string mYksi);
 	void MoreDocumentation();
+	void setParameter(string Parameter);
 
 private:
 	string mYksi;

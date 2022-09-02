@@ -1,13 +1,7 @@
 #include "normalCaseRun.h"
 
 
-using std::cout;
-using std::cin;
-using std::endl;
-using std::string;
-using std::ifstream;
-
-
+using namespace std;
 
 void normalCaseRUN(string two, string three, int O, int L, int R, int I)
 

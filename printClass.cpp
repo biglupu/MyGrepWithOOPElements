@@ -1,16 +1,14 @@
 #include "printClass.h"
-
 using namespace std;
 
 
 
-Documentation::Documentation(string Parameteri):
-				mYksi(Parameteri)
+void Documentation::setParameter(string Parameter)
 {
+	mYksi = Parameter;
 	argumentCheck(mYksi);
+
 }
-
-
 
 void Documentation::argumentCheck(string mYksi)
 {
@@ -67,18 +65,19 @@ void Documentation::MoreDocumentation()
 	cout << "Please specify the topic\n";
 	cout << "Input 1 for document \"Info\" \n";
 	cout << "Input 2 for document \"Help\"  \n";
-	cout << "Input 3 for document \"Arguments\"  \n";
+	cout << "Input 3 for document \"Acronyms\"  \n";
+	cout << "Input 4 to seize operations and exit\n";
 	
 	do
 	{
 		virhe = false;
 		cin >> check;
-		if ((cin.fail()) || check < 1 || check > 3)
+		if ((cin.fail()) || check < 1 || check > 4)
 		{
 			cout << "Error 203, please input again" << endl;
 			virhe = true;
 			cin.clear();
-			cin.ignore(80, '\n'); // clearaa 80 merkkiä näppäimistöpuskurista ja enterin
+			cin.ignore(numeric_limits<streamsize>::max(), '\n');
 		}
 	} while (virhe);
 	cin.clear();
@@ -90,7 +89,7 @@ void Documentation::MoreDocumentation()
 	}
 	else if (check == 2)
 	{
-		mYksi = "help";		
+		mYksi = "help";
 		argumentCheck(mYksi);
 	}
 	else if (check == 3)
@@ -98,6 +97,10 @@ void Documentation::MoreDocumentation()
 		mYksi = "acronyms";
 		argumentCheck(mYksi);
 	}
+	else if (check == 4)
+		return;
 	
 }
+
+
 

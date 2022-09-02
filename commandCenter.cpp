@@ -32,7 +32,8 @@ void doingStuff(int argCee, string yksi, string kaksi, string kolme)
 
 void doingStuff(int argCee, string yksi)
 {
-	Documentation test(yksi);
+	Documentation Run;
+	Run.setParameter(yksi);
 	
 }
 
