@@ -56,19 +56,7 @@ int printHelp()
 	cout << "Note that this program is meant to be used with English alphabets and won't support non-ASCII letters" << endl;
 	cout << "If an otherwise valid argument contains extra letters\n";
 	cout << "For example instead of \"-oli\" you were to write \"-olit\", and since \"t\" is not defined, the program will interpet it as \"-oli\"";
-
-	cout << "Seize operations or return to set new parameters\n\n";
-
-
-	cout << "\nOther than the \"info\", \"acronyms\"  and \"help\" -functions, operational acronyms" << endl;
-	cout << "start with \"-o\" to clarify that it's a run option." << endl;
-	cout << "When refering to for example LINENUMBER command, which is writen as \"-ol\"" << endl;
-	cout << "the document will refer to it as \"l\", with the \"-o\" being implied\n" << endl;
-	cout << "Example use of LINENUMBER -function writen on the terminal: ";
-	cout << "\nmygrep.exe -ol Search_Word Search_File.txt" << endl;
-	cout << "will display the line number where the Search_Word was found";
-	cout << endl;
-	cout << endl;
+	cout << "\nSeize operations or return to set new parameters\n\n";
 	cout << "List of run options specified under \"Acronyms\"" << endl;
 
 	do
@@ -99,11 +87,20 @@ int printAcronyms()
 	system("CLS");
 	cout << "LIST AND CLARIFICATION OF ACRONYMS\n\n";
 
+	cout << "\nOther than the \"info\", \"acronyms\"  and \"help\" -functions, operational acronyms" << endl;
+	cout << "start with \"-o\" to clarify that it's a run option." << endl;
+	cout << "When refering to for example LINENUMBER command, which is writen as \"-ol\"" << endl;
+	cout << "the document will refer to it as \"l\", with the \"-o\" being implied\n" << endl;
+	cout << "Example use of LINENUMBER -function writen on the terminal: ";
+	cout << "\nmygrep.exe -ol Search_Word Search_File.txt" << endl;
+	cout << "will also display the line number where the Search_Word was found";
+	cout << endl;
+	cout << endl;
+
 	cout << "HELP: \"h\", \"help\", \"HELP\"";
 	cout << "\nTutorial documentation on the program\n";
 	cout << endl;
-	cout << "Basic commands to run the program";
-
+	cout << "Basic commands to run the program\n";
 	cout << "LINE NUMBER: \"l\" " << endl;
 	cout << "OCCURANCES: \"o\" " << endl;
 	cout << "REVERSE SEARCH: \"r\" " << endl;
@@ -111,7 +108,7 @@ int printAcronyms()
 
 
 
-	cout << "List of errors\n\n";
+	cout << "\nLIST OF ERROR CODES\n\n";
 	cout << "Errors 100-200, unspecified run argument\n";
 	cout << "Errors 200-300, input not one of the given choices\n";
 	cout << "Errors 400-403, tried to run to program with a file that could not be open";

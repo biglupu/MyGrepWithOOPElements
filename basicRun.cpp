@@ -42,6 +42,8 @@ void basicRun(int argCee, string yksi, string kaksi)
     string found_w;
     bool found = 0;
     string line;
+    search_w = yksi;
+    filename = kaksi;
 
     bool printed = 0;
 
@@ -67,8 +69,7 @@ void basicRun(int argCee, string yksi, string kaksi)
     if (argCee > 1)
     {
 
-        search_w = yksi;
-        filename = kaksi;
+
 
         inputFile.open(filename);
         if (inputFile)
