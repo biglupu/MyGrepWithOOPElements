@@ -1,6 +1,10 @@
 #include "printClass.h"
 using namespace std;
 
+Documentation::Documentation()
+{
+
+}
 
 
 void Documentation::setParameter(string Parameter)

@@ -8,6 +8,7 @@ using namespace std;
 
 class Documentation {
 public:
+	Documentation();
 	void argumentCheck(string mYksi);
 	void MoreDocumentation();
 	void setParameter(string Parameter);
